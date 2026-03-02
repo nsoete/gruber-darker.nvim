@@ -22,11 +22,11 @@ M.highlights.color_column = Highlight.new("ColorColumn", { bg = c["bg+2"] })
 ---Placeholder characters substituted for concealed text (see 'conceallevel')
 M.highlights.conceal = Highlight.new("Conceal", { fg = c.fg, bg = c.bg })
 ---Character under the cursor
-M.highlights.cursor = Highlight.new("Cursor", { bg = c.yellow })
+M.highlights.cursor = Highlight.new("Cursor", { fg = c.bg, bg = c.yellow })
 ---The character under the cursor when |language-mapping| is used (see 'guicursor')
-M.highlights.l_cursor = Highlight.new("lCursor", { fg = c.none, bg = c.yellow })
+M.highlights.l_cursor = Highlight.new("lCursor", { fg = c.bg, bg = c.yellow })
 ---Like Cursor, but used when in IME mode |CursorIM|
-M.highlights.cursor_im = Highlight.new("CursorIM", { fg = c.none, bg = c.yellow })
+M.highlights.cursor_im = Highlight.new("CursorIM", { fg = c.bg, bg = c.yellow })
 ---Screen-column at the cursor, when 'cursorcolumn' is set.
 M.highlights.cursor_column = Highlight.new("CursorColumn", { bg = c["bg+2"] })
 ---Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
@@ -56,7 +56,7 @@ M.highlights.git_signs_delete = Highlight.new("GitSignsDelete", { link = M.highl
 ---Filler lines (~) after the end of the buffer.  By, this is highlighted like |hl-NonText|.
 M.highlights.end_of_buffer = Highlight.new("EndOfBuffer", { fg = c["bg+4"], bg = c.none })
 ---Cursor in a focused terminal
-M.highlights.term_cursor = Highlight.new("TermCursor", { bg = c.yellow })
+M.highlights.term_cursor = Highlight.new("TermCursor", { fg = c.bg, bg = c.yellow })
 ---TermCursorNC= { }, ---cursor in an unfocused terminal
 
 ---Error messages on the command line
